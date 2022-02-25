@@ -1,5 +1,8 @@
 # torchcsv 
 An Pytorch Dataset and Dataloader library for handling numerical data too large to fit in local memory.
+## Installation
+
+To install, run `pip install torchcsv`. 
 
 ## Usage
 The `CSVDataset` class inherits from `torch.Dataset` like we always do with custom Dataset classes. However, rather than reading the entire data and label `.csv` into memory, we make two assumptions:
@@ -17,7 +20,7 @@ data = CSVDataset(
     # indices=idx_list # Optionally, pass a list of purely numeric indices to use instead of the entire indices of the labelfile 
 )
 ```
-For example, getting a 16.3 dimensional sample takes 
+For example, getting a 16.3k dimensional sample takes 
 ```python
 > %%time
 > test[1]
