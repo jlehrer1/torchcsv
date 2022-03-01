@@ -37,7 +37,8 @@ class CSVDataset(torch.utils.data.Dataset):
         self.columns = self.get_features()
 
     def __getitem__(self, idx):
-        # Get index in dataframe from integer index
+        # Get index in dataframe from integer index, using name since it's of length 1
+        
         idx = self._labelfile.iloc[idx].name
         
         # Get label
