@@ -6,7 +6,7 @@ import linecache
 
 from typing import *
 
-class CSVDataset(torch.Dataset):
+class CSVDataset(torch.utils.data.Dataset):
     """
     Defines a PyTorch Dataset for a CSV too large to fit in memory. 
 
