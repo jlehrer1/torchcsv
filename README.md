@@ -1,5 +1,5 @@
 # torchcsv 
-An Pytorch Dataset and Dataloader library for handling numerical data too large to fit in local memory.
+An PyTorch Dataset subclass for handling numerical data too large to fit in local memory.
 ## Installation
 
 To install, run `pip install torchcsv`. 
