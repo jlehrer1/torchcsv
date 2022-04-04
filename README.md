@@ -4,7 +4,7 @@ An PyTorch Dataset subclass for handling numerical data too large to fit in loca
 
 To install, run `pip install torchcsv`. 
 
-## Usage
+## Example
 The `CSVDataset` class inherits from `torch.Dataset` like we always do with custom Dataset classes. However, rather than reading the entire data and label `.csv` into memory, we make two assumptions:
 1. The dataset is too large to fit in local memory 
 2. The labels are contained in a separate file. If this isn't the case, consider using `Dask` to obtain the column of interest, and then continue.
@@ -52,3 +52,7 @@ Wall time: 76.9 ms
 ```
 
 So loading a minibatch of size 4 takes about a quarter of a second. The `CSVDataset` class should be scalable, and will keep in memory what it can via the `linecache` library. 
+
+## API Documentation
+`torchcsv.CSVDataset`
+Dataset subclass that works for purely numeric data too large to fit in local memory. 
